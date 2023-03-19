@@ -1,0 +1,16 @@
+{
+  "name": "express-authoparser",
+  "version": "1.0.0",
+  "description": "The Express.js Middleware that parses query, body, params and removes HTML tags",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "mrKarton",
+  "license": "ISC",
+  "dependencies": {
+    "striptags": "^3.2.0"
+  }
+}
