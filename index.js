@@ -11,7 +11,7 @@ module.exports = (req, res, next) => {
     }
 
     let process = (obj) => {
-        if((typeof obj != 'object' && !isArray(obj)) || obj == null || Object.keys(obj).length == 0) return obj;
+        if((typeof obj != 'object' && !Array.isArray(obj)) || obj == null || Object.keys(obj).length == 0) return obj;
 
         for(let key in obj) 
         {

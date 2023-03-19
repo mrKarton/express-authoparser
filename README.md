@@ -5,7 +5,7 @@ The Express.js Middleware that parses query, body, params and removes HTML tags 
 From this:
 ```json
   {
-    "a":"<script>console.log("bad code");</script>",
+    "a":"<script>console.log(\"bad code\");</script>",
     "b":"[1,2,3,4,5,6]",
     "c":"{\"a\":\"string property\", \"b\":\"[1,3,4,5, \"true\"]\""
   }
@@ -14,7 +14,7 @@ From this:
 Mades this:
 ```json
   {
-    "a":"console.log("bad code");",
+    "a":"console.log('bad code');",
     "b":[1,2,3,4,5,6],
     "c":{
       "a":"string property",
@@ -29,7 +29,7 @@ In `req.query`, `req.body` (if you use [body-parser](https://www.npmjs.com/packa
 # Usage
 ```js
   let express = require('express');
-  let app = express.app();
+  let app = express();
   
   let authoparser = require('express-authoparser');
   app.use(authoparser);
